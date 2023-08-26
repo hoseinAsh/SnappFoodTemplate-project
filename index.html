@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/all.js"></script>
+    <title>SnappFood</title>
+  </head>
+  <body>
+
+    <div class="alert d-flex flex-column" id="alert">
+        <div>
+            <img src="image/logo.png" alt="" style="width: 56ps;height: 28px ;">
+            <button class="close" id="closeBtn" >
+                <span>&times;</span>
+            </button>
+        </div>
+       <div class="text-right alert-title">
+        <h4 class="font-weight-bold ml-2 d-inline-block">ورود</h4>
+        <span class="ml-2">یا</span>
+        <h4 class="ml-2 font-weight-bold d-inline-block">عضویت </h4>
+       </div>
+       <form action="#">
+        <div class="form-group text-right mt-5">
+            <label for="number">شماره تلفن‌همراه</label>
+            <input  type="number" name="number" class="form-control" placeholder=".....09" id="phoneInput">
+            <label>شماره با ۰۹ شروع می‌شود</label>
+            <p id="phone-error"></p>
+            <button class="submitBtn btn btn-block  mt-3" type="submit">ادامه</button>
+        </div>
+       </form>
+    </div>
+
+    <header class="header">
+      
+        <nav class="navbar navbar-expand-lg">
+          <span class="navbar-logo">
+            <img src="image/snappfood_logo.svg" alt="" class="header-logo" />
+          </span>
+
+          <div class="header-buttons mr-auto d-none d-lg-block">
+            <div class="button-group">
+              <a href="#" class="shop-singup">
+                <span class="singup-icon ml-1">
+                  <i class="fas fa-light fa-store"></i>
+                </span>
+                ثبت نام فروشندگان
+              </a>
+              <button class="btn btn-md btn-singup mr-3 text-center">
+                <span class="font-weight-bolder">ورود</span>
+                یا
+                <span class="font-weight-bolder">عضویت</span>
+              </button>
+            </div>
+          </div>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#alert" aria-expanded="false" aria-controls="alert" type="button">
+            <span class="navbar-icon">
+                <i class="fas fa-user"></i>
+            </span>
+        </button>
+        </nav>
+      
+        <div class="bg-img-container">
+            <img src="image/hero-image.png" alt="" class="header-img">
+        </div>
+
+        <div class="header-content text-right">
+            <div class="d-flex align-items-center flex-nowrap order-line">
+                <p class="font-weight-normal">سفارش آنلاین</p>
+                <div class="animated-text">
+                    <div class="animated-text-content mr-3">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">غذا</div>
+                              <div class="swiper-slide">نان</div>
+                              <div class="swiper-slide">میوه</div>
+                              <div class="swiper-slide">قهوه</div>
+                              <div class="swiper-slide">پیتزا</div>
+                              <div class="swiper-slide">خوارو‌بار</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="subheading-title">سفارش آنلاین غذا، میوه، نان، شیرینی و ...</p>
+
+            <div class="ch-location d-flex justify-content-between flex-wrap p-2 text-center">
+                <div class="align-self-center texcol-xl-2 t-cente3">
+                    <span class="location-icon ml-1">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    <p class="d-inline-block">
+                        ابتدا آدرستان را انتخاب کنید.
+                    </p>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button class="btn rounded-circle btn-search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <nav class="navbar navbar-expanded flex-nowrap justify-content-between">
+                <a href="#" class="nav-link text-center">
+                    <img src="image/img_st_food.png" alt="" class="nav-img img-fluid mb-2">
+                    <p>رستوران</p>
+                </a>
+                <a href="#" class="nav-link text-center">
+                    <img src="image/img_st_supermarket.png" alt="" class="nav-img img-fluid mb-2">
+                    <p>سوپرمارکت</p>
+                </a>
+                <a href="#" class="nav-link text-center">
+                    <img src="image/img_st_cafe.png" alt="" class="nav-img img-fluid mb-2">
+                    <p>کافه</p>
+                </a>
+                <a href="#" class="nav-link text-center">
+                    <img src="image/img_st_sweet.png" alt="" class="nav-img img-fluid mb-2">
+                    <p>شیرینی‌</p>
+                </a>
+                <a href="#" class="nav-link text-center">
+                    <img src="image/img_st_bakery.png" alt="" class="nav-img img-fluid mb-2">
+                    <p>نانوایی</p>
+                </a>
+                <a href="#" class="nav-link text-center">
+                    <img src="image/img_st_fruit.png" alt="" class="nav-img img-fluid mb-2">
+                    <p>میوه</p>
+                </a>
+                <a href="#" class="nav-link text-center">
+                    <img src="image/img_st_meat.png" alt="" class="nav-img img-fluid mb-2">
+                    <p>پروتئین</p>
+                </a>
+                <a href="#" class="nav-link text-center">
+                    <img src="image/img_st_icecream.png" alt="" class="nav-img img-fluid mb-2">
+                    <p>آبمیوه بستنی</p>
+                </a>
+                <a href="#" class="nav-link text-center">
+                    <img src="image/img_st_nut.png" alt="" class="nav-img img-fluid mb-2">
+                    <p>آجیل</p>
+                </a>
+                <a href="#" class="nav-link text-center">
+                    <img src="image/img_st_other2.png" alt="" class="nav-img img-fluid mb-2">
+                    <p>سایر</p>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="category">
+        <div class="container-category">
+            <div class="row">
+                <div class="col text-right">
+                    <h4 class="font-weight-bold">دسته بندی ها</h4>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-2 col-md-4 col-sm-6 ">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_irani_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    ایرانی
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 ">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_fastfood_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    فست‌فود
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 ">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_kebab_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    کباب
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 ">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_pizza_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    پیتزا
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 ">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_burger_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    برگر
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 ">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_sandwich_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    ساندویچ
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_sokhari_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    سوخاری
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_italy_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    پاستا
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_salad_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    سالاد
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_seafood_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    دریایی
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_asian_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    بین‌الملل
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <a href="#" class="category-item">
+                        <div class="category-item-content">
+                            <img src="image/website_image_gilani_1.jpg" alt="" class="categpry-img img-fluid">
+                            <div class="category-text">
+                                <span>
+                                    گیلانی
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="application-section py-5">
+        <div class="app-container">
+            <div class="d-flex flex-column text-right app-text d-inline-block w-md-100">
+                <h2 class="app-heading">اپلیکیشن اسنپ‌فود</h2>
+                <p class="app-subheading" >با اپلیکیشن اسنپ‌فود به راحتی و با چند کلیک ساده می‌توانید رستوران‌ها، کافه‌ها، شیرینی‌فروشی‌ها و سوپرمارکت‌های نزدیک خودتان را جست‌و‌جو کرده و از تجربه سفارش آسان از اسنپ‌فود لذت ببرید.</p>
+                <div>
+                    <p class="form-lable"> برای دریافت لینک دانلود اپلیکیشن، شماره موبایلتان رو وارد کنید </p>
+                    <form action="" class="form-container d-flex">
+                        <div>
+                            <input type="text" placeholder="*********۰۹" class="d-inline-block getcode-inp">
+                        </div>
+                        <button type="submit" class="btn btn-md rounded getcode-btn">دریافت لینک</button>
+                    </form>
+                </div>
+                <div class="app-links my-5">
+                    <a href="#" class="btn rounded">
+                        <img src="image/iapps.svg" alt="">
+                    </a>
+                    <a href="#" class="btn rounded">
+                        <img src="image/iapps.svg" alt="">
+                    </a>
+                    <a href="#" class="btn rounded">
+                        <img src="image/iapps.svg" alt="">
+                    </a>
+                    <a href="#" class="btn rounded">
+                        <img src="image/iapps.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <img src="image/img_app_mockup@2x.png" alt="" class="app-img d-none d-md-block">
+        </div>
+    </section>
+
+    <section class="sabtnam">
+        <div class="app-container text-right position-relative s-c">
+            <div class="sabtnam-text">
+                <p class="s-heading">صاحب کسب و کار هستید؟</p>
+                <p class="s-subheading">با اسنپ فود کسب و کارتان را آنلاین کنید و فروشتان را افزایش دهید.</p>
+                <button class="btn rounded s-btn btn-singup btn-5 font-weight-bold">
+                    <span class="singup-icon ml-1">
+                        <i class="fas fa-light fa-store"></i>
+                    </span>
+                      ثبت نام فروشندگان
+                </button>
+            </div>
+            <img src="image/vendor_pic.png" alt="" class="h-img d-none d-md-block">
+        </div>
+    </section>
+
+    <div class="line-breaker"></div>
+
+    <section class="cityies text-right">
+        <div class="city-container">
+            <p class="city-heading">اسنپ‌فود در شهرهای ایران</p>
+            <div class="row">
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">تهران</a>
+                    <a href="#" class="city-item">اردبیل</a>
+                    <a href="#" class="city-item">نیشابور</a>
+                    <a href="#" class="city-item">مرودشت</a>
+                    <a href="#" class="city-item">پاکدشت</a>
+                    <a href="#" class="city-item">سپاهان شهر</a>
+                    <a href="#" class="city-item">قشم</a>
+                    <a href="#" class="city-item">دماوند</a>
+                    <a href="#" class="city-item">هشتگرد</a>
+                    <a href="#" class="city-item">درود</a>
+                    <a href="#" class="city-item">آستانه اشرفیه</a>
+                    <a href="#" class="city-item">شوشتر</a>
+                </div>
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">مشهد</a>
+                    <a href="#" class="city-item"> رشت</a>
+                    <a href="#" class="city-item">اسلامشهر</a>
+                    <a href="#" class="city-item">پردیس</a>
+                    <a href="#" class="city-item">رباط کریم</a>
+                    <a href="#" class="city-item">شهریار</a>
+                    <a href="#" class="city-item">لواسان</a>
+                    <a href="#" class="city-item">شهرضا</a>
+                    <a href="#" class="city-item">لار</a>
+                    <a href="#" class="city-item">چهارمحال بختیاری</a>
+                    <a href="#" class="city-item">رودهن</a>
+                    <a href="#" class="city-item">اردکان یزد</a>
+                </div>
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">اصفهان</a>
+                    <a href="#" class="city-item">ساری</a>
+                    <a href="#" class="city-item">بجنورد</a>
+                    <a href="#" class="city-item">مرودشت</a>
+                    <a href="#" class="city-item">پاکدشت</a>
+                    <a href="#" class="city-item">مرند</a>
+                    <a href="#" class="city-item">نور</a>
+                    <a href="#" class="city-item">تنکابن</a>
+                    <a href="#" class="city-item">نکا</a>
+                    <a href="#" class="city-item">آران بیدگل</a>
+                    <a href="#" class="city-item">تربت جام</a>
+                    <a href="#" class="city-item">رودسر</a>
+                </div>
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">شیراز</a>
+                    <a href="#" class="city-item">بوشهر</a>
+                    <a href="#" class="city-item">یاسوج</a>
+                    <a href="#" class="city-item">ساوه</a>
+                    <a href="#" class="city-item">بروجرد</a>
+                    <a href="#" class="city-item">اندیمشک</a>
+                    <a href="#" class="city-item">بومهن</a>
+                    <a href="#" class="city-item">صدرا</a>
+                    <a href="#" class="city-item">مبارکه</a>
+                    <a href="#" class="city-item">باقر شهر</a>
+                    <a href="#" class="city-item">سرعین</a>
+                    <a href="#" class="city-item">آبیک</a>
+                </div>
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">کرج</a>
+                    <a href="#" class="city-item">گرگان</a>
+                    <a href="#" class="city-item">
+                        بیرجند</a>
+                    <a href="#" class="city-item">
+                        بندر انزلی</a>
+                    <a href="#" class="city-item">
+                        ورامین</a>
+                    <a href="#" class="city-item">
+                        چالوس</a>
+                    <a href="#" class="city-item">
+                        سهند</a>
+                    <a href="#" class="city-item">
+                        رودهن</a>
+                    <a href="#" class="city-item">
+                        کلارآباد</a>
+                    <a href="#" class="city-item">
+                        بم</a>
+                    <a href="#" class="city-item">
+                        رامهرمز</a>
+                    <a href="#" class="city-item">
+                        داراب</a>
+                </div>
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">تهران</a>
+                    <a href="#" class="city-item">اردبیل</a>
+                    <a href="#" class="city-item">نیشابور</a>
+                    <a href="#" class="city-item">مرودشت</a>
+                    <a href="#" class="city-item">پاکدشت</a>
+                    <a href="#" class="city-item">سپاهان شهر</a>
+                    <a href="#" class="city-item">قشم</a>
+                    <a href="#" class="city-item">دماوند</a>
+                    <a href="#" class="city-item">هشتگرد</a>
+                    <a href="#" class="city-item">درود</a>
+                    <a href="#" class="city-item">آستانه اشرفیه</a>
+                    <a href="#" class="city-item">شوشتر</a>
+                </div>
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">
+                        تبریز</a>
+                    <a href="#" class="city-item">
+                        همدان</a>
+                    <a href="#" class="city-item">
+                        بابل</a>
+                    <a href="#" class="city-item">
+                        شاهرود</a>
+                    <a href="#" class="city-item">
+                        پرند</a>
+                    <a href="#" class="city-item">
+                        محمود آباد</a>
+                    <a href="#" class="city-item">
+                        قوچان</a>
+                    <a href="#" class="city-item">
+                        سلمان شهر</a>
+                    <a href="#" class="city-item">
+                        طرقبه</a>
+                    <a href="#" class="city-item">
+                        رفسنجان</a>
+                    <a href="#" class="city-item">
+                        چابهار</a>
+                    <a href="#" class="city-item">
+                        میاندوآب</a>
+                </div>
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">
+                        قم</a>
+                    <a href="#" class="city-item">
+                        کرمانشاه</a>
+                    <a href="#" class="city-item">
+                        لاهیجان</a>
+                    <a href="#" class="city-item">
+                        سمنان</a>
+                    <a href="#" class="city-item">
+                        کیش</a>
+                    <a href="#" class="city-item">
+                        بهارستان</a>
+                    <a href="#" class="city-item">
+                        کازرون</a>
+                    <a href="#" class="city-item">
+                        فریدونکنار</a>
+                    <a href="#" class="city-item">
+                        ملایر</a>
+                    <a href="#" class="city-item">
+                        مارلیک</a>
+                    <a href="#" class="city-item">
+                        خرمشهر</a>
+                </div>
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">
+                        اهواز</a>
+                    <a href="#" class="city-item">
+                        بندرعباس</a>
+                    <a href="#" class="city-item">
+                        خرم آباد</a>
+                    <a href="#" class="city-item">
+                        آمل</a>
+                    <a href="#" class="city-item">
+                        خمینی شهر</a>
+                    <a href="#" class="city-item">
+                        نوشهر</a>
+                    <a href="#" class="city-item">
+                        نسیم شهر</a>
+                    <a href="#" class="city-item">
+                        سرخ رود</a>
+                    <a href="#" class="city-item">
+                        خمین</a>
+                    <a href="#" class="city-item">
+                        ملارد</a>
+                    <a href="#" class="city-item">
+                        میبد</a>
+                </div>
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">
+                        یزد</a>
+                    <a href="#" class="city-item">
+                        زنجان</a>
+                    <a href="#" class="city-item">
+                        دزفول</a>
+                    <a href="#" class="city-item">
+                        سنندج</a>
+                    <a href="#" class="city-item">
+                        زاهدان</a>
+                    <a href="#" class="city-item">
+                        قشم</a>
+                    <a href="#" class="city-item">
+                        رامسر</a>
+                    <a href="#" class="city-item">
+                        فومن</a>
+                    <a href="#" class="city-item">
+                        بروجن</a>
+                    <a href="#" class="city-item">
+                        ویلاشهر</a>
+                    <a href="#" class="city-item">
+                        فسا</a>
+                </div>
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">
+                        قزوین</a>
+                    <a href="#" class="city-item">
+                        شاهین شهر</a>
+                    <a href="#" class="city-item">
+                        آبادان</a>
+                    <a href="#" class="city-item">
+                        شهرکرد</a>
+                    <a href="#" class="city-item">
+                        ایلام</a>
+                    <a href="#" class="city-item">
+                        خوی</a>
+                    <a href="#" class="city-item">
+                        فولادشهر</a>
+                    <a href="#" class="city-item">
+                        ایزدشهر</a>
+                    <a href="#" class="city-item">
+                        زرین شهر</a>
+                    <a href="#" class="city-item">
+                        سیرجان</a>
+                    <a href="#" class="city-item">
+                        شیرگاه</a>
+                </div>
+                <div class="col col-md-3 col-lg-1 col-sm-4 text-right d-flex flex-column">
+                    <a href="#" class="city-item">
+                        کرمان</a>
+                    <a href="#" class="city-item">
+                        اراک</a>
+                    <a href="#" class="city-item">
+                        بابلسر</a>
+                    <a href="#" class="city-item">
+                        نجف آباد</a>
+                    <a href="#" class="city-item">
+                        تربت حیدریه</a>
+                    <a href="#" class="city-item">
+                        شهر قدس</a>
+                    <a href="#" class="city-item">
+                        دماوند</a>
+                    <a href="#" class="city-item">
+                        صومعه سرا</a>
+                    <a href="#" class="city-item">
+                        زابل</a>
+                    <a href="#" class="city-item">
+                        ماسال</a>
+                    <a href="#" class="city-item">
+                        تفت</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-12 mb-4">
+                    <div class="row">
+                        <a href="#" class="navbar-brand logo ml-3">
+                            <img src="image/snappfood_logo.svg" alt="" class="footer-logo">
+                        </a>
+                        <div>
+                            <p class="footer-heading text-right mb-1">اسنپ‌فود</p>
+                            <p class="footer-subheading text-right">تجربه سفارش غذا، از زودفود تا اسنپ‌فود</p>
+                        </div>
+                    </div>
+                    <div class="row footer-links">
+                        <a href="#" class="nav-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="nav-link">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="nav-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="nav-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="nav-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <ul class="text-right footer-menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">درباره اسنپ‌فود</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">همکاری با ما</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">وبلاگ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">قوانین سایت</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">حریم خصوصی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">ثبت نام فروشندگان</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <ul class="text-right footer-menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">تماس با اسنپ‌فود</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">پرسش‌های متداول</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">ثبت شکایات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">اپلیکیشن موبایل</a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <img src="image/senf.png" alt="" class="enamad-logo">
+                    <img src="image/senf.png" alt="" class="enamad-logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 20,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
